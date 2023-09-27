@@ -73,3 +73,8 @@ export const InputDescription = styled.div`
   color: #777; /* Lighter text color for input descriptions */
   margin-top: 4px;
 `;
+
+export const Warning = styled.p`
+    margin-top: 20px;
+    color:red;
+`;

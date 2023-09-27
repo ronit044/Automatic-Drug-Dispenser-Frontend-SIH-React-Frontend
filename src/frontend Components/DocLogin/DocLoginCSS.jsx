@@ -57,3 +57,9 @@ export const A = styled.a`
     text-decoration: underline;
   }
 `;
+
+
+export const Warning = styled.p`
+    margin-top: 20px;
+    color:red;
+`;

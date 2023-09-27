@@ -1,8 +1,27 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import { Link } from "react-router-dom";
 import './NavbarCSS.css';
 
 export default function Navbar() {
+
+    const [LogStatus,setLogStatus]=useState(false);
+
+    useEffect(() => {
+        const userName = localStorage.getItem("email");
+        const pswd = localStorage.getItem("pswd");
+
+        if (userName && pswd) {
+            setLogStatus(true);
+        } else {
+            setLogStatus(false);
+        }
+    }, []);
+   async function Logout(){
+        localStorage.removeItem("userName");
+        localStorage.removeItem("pswd");
+        setLogStatus(false);
+        window.location.href="/";
+    }
     return (
         <body>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -16,7 +35,7 @@ export default function Navbar() {
                     />
                 </a>
                 <span className="nav-name ms-auto" style={{ color: 'aliceblue' }}>
-                    Alpha coderz
+                    Ministry of Ayush
                 </span>
                 <button
                     className="navbar-toggler"
@@ -36,7 +55,7 @@ export default function Navbar() {
                             <Link to="/" className="custom-link"> Home</Link>
                             </a>
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <a className="nav-link active" href="#">
                                 Medicine
                             </a>
@@ -69,10 +88,10 @@ export default function Navbar() {
                                     </a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> */}
                         <li className="nav-item">
                             <a
-                                className="nav-link active"
+                                className="nav-link active custom-link"
                                 href="#scroll"
                                 tabIndex="-1"
                                 aria-disabled="true"
@@ -81,7 +100,7 @@ export default function Navbar() {
                             </a>
                         </li>
                     </ul>
-                    <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+                    {!LogStatus?<ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li className="nav-but">
                             <a className="btn btn-outline-light">
                             <Link to="/DocSignup" className="custom-link"> SignUp</Link>
@@ -92,7 +111,15 @@ export default function Navbar() {
                             <Link to="/DocLogin" className="custom-link">Login</Link>
                             </a>
                         </li>
-                    </ul>
+                    </ul>:null}
+
+                    {LogStatus?<li className="nav-but">
+                            <a className="btn btn-outline-light" onClick={Logout}>
+                           Logout
+                            </a>
+                        </li>:null}
+
+
                 </div>
             </div>
         </nav>
