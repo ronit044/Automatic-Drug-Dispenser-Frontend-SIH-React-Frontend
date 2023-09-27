@@ -85,7 +85,7 @@ const HomePagee = () => {
           </div>
           <br />
 
-          <div className="abo">
+          <div id="scroll" className="abo">
             <br />
             <h1 className="welcome-text" style={{ width: '25%', marginLeft: '2%' }}>about us</h1>
             <br />

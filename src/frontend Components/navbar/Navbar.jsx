@@ -73,7 +73,7 @@ export default function Navbar() {
                         <li className="nav-item">
                             <a
                                 className="nav-link active"
-                                href="#"
+                                href="#scroll"
                                 tabIndex="-1"
                                 aria-disabled="true"
                             >
@@ -84,12 +84,12 @@ export default function Navbar() {
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li className="nav-but">
                             <a className="btn btn-outline-light">
-                            <Link to="/DocOrPatientSignup" className="custom-link"> SignUp</Link>
+                            <Link to="/DocSignup" className="custom-link"> SignUp</Link>
                             </a>
                         </li>
                         <li className="nav-but">
                             <a className="btn btn-outline-light" href="#">
-                            <Link to="/DocOrPatientLogin" className="custom-link">Login</Link>
+                            <Link to="/DocLogin" className="custom-link">Login</Link>
                             </a>
                         </li>
                     </ul>
