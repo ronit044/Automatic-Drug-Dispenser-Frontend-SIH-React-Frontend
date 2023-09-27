@@ -1,0 +1,26 @@
+.navbar .navbar-nav .nav-item a{
+    padding: 15px;
+}
+.navbar .navbar-nav .nav-item a:hover{
+    font-size: 18px;
+}
+.navbar .navbar-nav .nav-but{
+    padding: 10px;
+}
+.navbar .nav-name{
+    font-style: italic;
+    font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.NavLogo{
+    object-fit: contain;
+}
+.custom-link {
+    text-decoration: none; /* Remove the default underline */
+    color: white; /* Set your preferred text color */
+  }
+  .custom-link:hover {
+    text-decoration: none; /* Remove the default underline */
+    color: red; /* Set your preferred text color */
+  }
