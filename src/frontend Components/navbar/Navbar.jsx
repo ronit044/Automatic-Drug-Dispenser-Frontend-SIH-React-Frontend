@@ -26,7 +26,7 @@ export default function Navbar() {
         <body>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container-fluid">
-                <a className="navbar-brand" href="#">
+                <a className="navbar-brand" href="/">
                     <img
                         src="https://media.discordapp.net/attachments/1123159642638393397/1156515811595407432/doctor.png?ex=651540c8&is=6513ef48&hm=a22286d1e2537d8d445fe8be1c3725aa159b8b2299f25101d05fd90df1e2b028&"
                         alt="logo"
@@ -53,6 +53,11 @@ export default function Navbar() {
                         <li className="nav-item">
                             <a className="nav-link active" aria-current="page">
                             <Link to="/" className="custom-link"> Home</Link>
+                            </a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link active" aria-current="page">
+                            <Link to="/General" className="custom-link"> General</Link>
                             </a>
                         </li>
                         {/* <li className="nav-item">

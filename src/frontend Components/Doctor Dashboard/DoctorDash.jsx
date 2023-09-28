@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import "./Dash.css"
+import { Link } from "react-router-dom";
+
 // Styled Components
 const DashboardContainer = styled.div`
   display: flex;
@@ -59,12 +61,12 @@ const Dashboard = () => {
         <h3>Doctor Name</h3>
         <p>Doctor's Speciality</p>
         <p>Doctor ID</p>
-        <button>Generate Prescription</button>
+        <button><Link to="/PatientForm1">Generate Prescription</Link></button>
         <button>Update Doctor Details</button>
       </Tile>
 
       <Tile>
-        <img  className="patientIMG" src="https://www.collinsdictionary.com/images/full/patient_589302497_1000.jpg" alt="Patient" />
+        <img src="https://www.collinsdictionary.com/images/full/patient_589302497_1000.jpg" alt="Patient"  />
        <br/>
        <br/><br/><br/><br/>
         <button>Fetch Patient History</button>

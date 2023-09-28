@@ -14,7 +14,7 @@ const HomePagee = () => {
       {/* <link rel="stylesheet" href="your-stylesheet.css" /> */}
       
       <marquee>
-        <h1>MEDZONE Welcomes U | Get Your First "QR SCANNED PRESCRIPTION" DONE AT FREE OF COST " Instant Services At Even Your Doorstep</h1>
+        <h1>MEDZONE Welcomes U | Get Your First "QR SCANNED PRESCRIPTION" DONE AT FREE OF COST " Instant Services Even at your Doorstep</h1>
       </marquee>
 
       {/* Start Section Coding */}

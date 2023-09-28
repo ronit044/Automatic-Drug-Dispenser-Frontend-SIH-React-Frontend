@@ -11,10 +11,28 @@ import {
 const PatientForm = () => {
 
   function handleSubmit(event) {
-        event.preventDefault();
-        window.location.href="/PatientForm2";
+    event.preventDefault();
+    
+    // Create an object to store the form data
+    const formData = {};
+  
+    // Loop through the form elements and add their values to the object
+    for (let i = 0; i < event.target.elements.length; i++) {
+      const element = event.target.elements[i];
+      if (element.type !== "submit") {
+        formData[element.name] = element.value;
+      }
+    }
+  
+    // Convert the object to a JSON string
+    const formDataJson = JSON.stringify(formData);
+  
+    // Store the JSON string in local storage
+    localStorage.setItem("formData", formDataJson);
+  
+    // Redirect to another page (e.g., "/PatientForm2")
+    window.location.href = "/PatientForm2";
   }
-
   return (
     <Container>
       <Title>Patients's Details</Title>
